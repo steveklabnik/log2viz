@@ -31,9 +31,11 @@ cp .env.sample .env
 curl -i -n -X POST \
 -d "client[name]=myviz&client[redirect_uri]=http://localhost:5000/auth/heroku/callback" \
 https://api.heroku.com/oauth/clients
+```
 
-HTTP/1.1 201 Created
+    HTTP/1.1 201 Created
 
+```json
 {
   "id":"3f1057xxxxxxxxxxxxxxx”,
   "name":"myviz",
@@ -48,9 +50,11 @@ As well as view your existing clients:
 
 ```
 curl -i -n -X GET https://api.heroku.com/oauth/clients
+```
 
-HTTP/1.1 200 OK
+    HTTP/1.1 200 OK
 
+```json
 [
   {
     "id":"3f1057xxxxxxxxxxxxxxx”,
